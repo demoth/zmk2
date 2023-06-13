@@ -106,6 +106,7 @@ jobs:
           if [ -f build/zephyr/zmk.uf2 ]
           then
             cp build/zephyr/zmk.uf2 "build/artifacts/${{ env.artifact_name }}.uf2"
+            cp build/zephyr/zmk.hex "build/artifacts/${{ env.artifact_name }}.hex"
           elif [ -f build/zephyr/zmk.${{ inputs.fallback_binary }} ]
           then
             cp "build/zephyr/zmk.${{ inputs.fallback_binary }}" "build/artifacts/${{ env.artifact_name }}.${{ inputs.fallback_binary }}"
